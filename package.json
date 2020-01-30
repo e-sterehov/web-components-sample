@@ -4,17 +4,17 @@
     "description": "Sample web components app",
     "private": true,
     "scripts": {
-        "build": "babel src --out-dir dist --copy-files",
-        "serve": "npm run build && node dist/app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/e-sterehov/web-components-sample.git"
+        "build": "webpack",
+        "watch": "webpack --mode development --watch",
+        "serve": "webpack-dev-server --open"
     },
     "author": "Eugen Sterehov",
     "license": "ISC",
     "devDependencies": {
+        "clean-webpack-plugin": "^3.0.0",
+        "html-webpack-plugin": "^3.2.0",
         "webpack": "^4.41.5",
-        "webpack-cli": "^3.3.10"
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.1"
     }
 }
