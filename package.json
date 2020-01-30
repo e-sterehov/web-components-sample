@@ -1,25 +1,20 @@
 {
-  "name": "web-components-sample",
-  "version": "1.0.0",
-  "description": "Sample web components app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/e-sterehov/web-components-sample.git"
-  },
-  "author": "Eugen Sterehov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/e-sterehov/web-components-sample/issues"
-  },
-  "homepage": "https://github.com/e-sterehov/web-components-sample#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1",
-    "http-server": "^0.12.1"
-  }
+    "name": "web-components-sample",
+    "version": "1.0.0",
+    "description": "Sample web components app",
+    "private": true,
+    "scripts": {
+        "build": "babel src --out-dir dist --copy-files",
+        "serve": "npm run build && node dist/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/e-sterehov/web-components-sample.git"
+    },
+    "author": "Eugen Sterehov",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
 }
