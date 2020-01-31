@@ -5,16 +5,18 @@
     "private": true,
     "scripts": {
         "build": "webpack",
-        "watch": "webpack --mode development --watch",
-        "serve": "webpack-dev-server --open"
+        "watch": "webpack --env.mode development --watch",
+        "dev": "webpack-dev-server --env.mode development --open"
     },
     "author": "Eugen Sterehov",
     "license": "ISC",
     "devDependencies": {
-        "clean-webpack-plugin": "^3.0.0",
-        "html-webpack-plugin": "^3.2.0",
-        "webpack": "^4.41.5",
-        "webpack-cli": "^3.3.10",
-        "webpack-dev-server": "^3.10.1"
+        "clean-webpack-plugin": "3.0.0",
+        "copy-webpack-plugin": "^5.1.1",
+        "html-webpack-plugin": "3.2.0",
+        "webcomponentsjs": "^1.0.2",
+        "webpack": "4.41.5",
+        "webpack-cli": "3.3.10",
+        "webpack-dev-server": "3.10.1"
     }
 }

@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = (env, argv) => {
-    const { mode } = argv;
+module.exports = ({ mode }) => {
     console.log(`Run webpack in "${mode}" mode`);
     return {
         mode,
@@ -20,8 +20,16 @@ module.exports = (env, argv) => {
         plugins: [
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
-                title: 'Sample Web Components App'
-            })
-        ]
+                template: './src/index.html'
+            }),
+            new CopyWebpackPlugin([
+                {
+                    context: 'node_modules/@webcomponents/webcomponentsjs',
+                    from: '**/*.js',
+                    to: 'webcomponents'
+                }
+            ])
+        ],
+        devtool: mode === 'development' ? 'source-map' : 'nonde'
     };
 };
