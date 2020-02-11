@@ -1,7 +1,18 @@
-import { chat } from './layouts/chat/chat.layout';
+import { Chat } from "./chat/chat.component";
 
 export const App = {
     init() {
-        chat.loadThreads();
+        // Create main app element
+        const appElement = document.createElement('main');
+        appElement.id = 'app';
+
+        // Add to app element
+        document.body.appendChild(appElement);
+        this.render();
+    },
+
+    render() {
+        // Append chat section
+        Chat.init();
     }
 };
