@@ -15,7 +15,7 @@ export const Chat = {
         // Mock chat data
         const mockThreads = [
             {
-                name: 'thread one1',
+                name: 'thread one',
                 messages: ['message one', 'message two']
             },
             {
