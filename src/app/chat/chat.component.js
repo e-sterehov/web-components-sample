@@ -10,6 +10,7 @@ export const Chat = {
 
         this.render();
     },
+
     render() {
         // Mock chat data
         const mockThreads = [
