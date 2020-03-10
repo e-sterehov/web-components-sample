@@ -15,7 +15,7 @@ class Thread {
         const messagesList = messages.reduce(
             (html, message) => html + `<li>${message}</li>`,
             ''
-        );
+        )
 
         return messagesList;
     }
